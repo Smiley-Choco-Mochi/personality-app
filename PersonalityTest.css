@@ -1,0 +1,136 @@
+/* Global Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #fc888c, #e4cbc4);
+    color: #4A148C;
+    line-height: 1.6;
+    font-size: 1.2rem;
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column; /* Center Everything */
+}
+
+/* Container */
+.container {
+    width: 60%;
+    max-width: 900px;
+    padding: 25px;
+    background: #ffffff;
+    border-radius: 12px;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Smooth Fade-in Effect */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-10px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Heading */
+h1 {
+    color: #5D4F98;
+    font-size: 2.2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+/* Questions */
+.question {
+    margin-bottom: 15px;
+    font-size: 1.2rem;
+    text-align: left;
+}
+
+.question p {
+    font-size: 1.2rem;
+    margin-bottom: 8px;
+}
+
+label {
+    font-size: 1rem;
+    display: block;
+    margin-bottom: 8px;
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    margin-right: 10px;
+    transform: scale(1.2);
+}
+
+/* Button */
+button {
+    display: block;
+    width: 100%;
+    padding: 12px 20px;
+    background: linear-gradient(135deg, #4CAF50, #2E7D32);
+    color: #fff;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    background: linear-gradient(135deg, #45a049, #1B5E20);
+    transform: scale(1.05);
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3);
+}
+
+button:active {
+    transform: scale(0.98);
+}
+
+/* Result Box (Initially Hidden) */
+#result {
+    display: none; /* Initially Hidden */
+    width: auto;
+    margin-top: 30px;
+    padding: 20px;
+    color: #ffffff;
+    background: linear-gradient(135deg, #7E57C2, #512DA8);
+    border-radius: 12px;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.3);
+    animation: fadeIn 0.5s ease-in-out;
+}
+
+/* Responsive Styles for Small Screens */
+@media (max-width: 600px) {
+    body {
+        font-size: 1rem;
+    }
+
+    .container {
+        width: 90%;
+    }
+
+    h1 {
+        font-size: 1.8rem;
+    }
+
+    .question p {
+        font-size: 1rem;
+    }
+
+    button {
+        font-size: 1.1rem;
+        padding: 10px 15px;
+    }
+}
